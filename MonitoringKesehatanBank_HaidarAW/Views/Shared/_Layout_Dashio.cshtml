@@ -1,0 +1,191 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <!-- Favicons -->
+    <link href="~/Content/img/bi1.png" rel="icon">
+    <link href="~/Content/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="~/Content/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/lib/gritter/css/jquery.gritter.css" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/style-responsive.css" rel="stylesheet">
+    <script src="~/Content/lib/chart-master/Chart.js"></script>
+
+
+</head>
+
+<body>
+    <section id="container">
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Klik Disini"></div>
+            </div>
+            <!--logo start-->
+            <a class="logo"><b>Monitoring Kesehatan<span> Bank</span></b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+
+
+            </div>
+            <div class="top-menu">
+                <div class="navbar-collapse collapse">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+            MAIN SIDEBAR MENU
+            *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><img src="~/Content/img/bi1.png" width="80"></a></p>
+
+                    @if (User.IsInRole("superadmin"))
+                    {
+                        <li class="mt">
+                            <a href="@Url.Action("Index", "Home")">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Beranda</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("Index", "UploadData")">
+                                <i class="fa fa-upload"></i>
+                                <span>Upload Data</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("Index", "DataKinerja")">
+                                <i class="fa fa-file-pdf-o"></i>
+                                <span>Data Kinerja</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("Index", "Role")">
+                                <i class="fa fa-user-circle"></i>
+                                <span>Manage Role</span>
+                            </a>
+                        </li>
+                    }
+                    else if (User.IsInRole("karyawan"))
+                    {
+                        <li class="mt">
+                            <a href="@Url.Action("Index", "Home")">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Beranda</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("Index", "DataKinerja")">
+                                <i class="fa fa-star"></i>
+                                <span>Data Kinerja</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("About", "Home")">
+                                <i class="fa fa-gear"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="@Url.Action("Contact", "Home")">
+                                <i class="fa fa-address-book"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="mt">
+                            <a href="@Url.Action("Index", "Home")">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Beranda</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+            MAIN CONTENT
+            *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="col-lg-9 main-chart">
+                        <!--CUSTOM CHART START -->
+
+                        @RenderBody()
+
+                    </div>
+                    <!-- /col-lg-9 END SECTION MIDDLE -->
+                    <!-- **********************************************************************************************************************************************************
+                        RIGHT SIDEBAR CONTENT
+                        *********************************************************************************************************************************************************** -->
+                    <!-- /col-lg-3 -->
+                </div>
+                <!-- /row -->
+            </section>
+        </section>
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="navbar-fixed-bottom">
+            <div class="text-center">
+                <p>
+                    &copy; Copyrights <strong>Haidar Aldi Wintoro</strong>. All Rights Reserved
+                </p>
+                <div class="credits">
+
+                    Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+                </div>
+                <a href="index.html#" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="~/Content/lib/jquery/jquery.min.js"></script>
+
+    <script src="~/Content/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="~/Content/lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="~/Content/lib/jquery.scrollTo.min.js"></script>
+    <script src="~/Content/lib/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="~/Content/lib/jquery.sparkline.js"></script>
+    <!--common script for all pages-->
+    <script src="~/Content/lib/common-scripts.js"></script>
+    <script type="text/javascript" src="~/Content/lib/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="~/Content/lib/gritter-conf.js"></script>
+    <!--script for this page-->
+    <script src="~/Content/lib/sparkline-chart.js"></script>
+    <script src="~/Content/lib/zabuto_calendar.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

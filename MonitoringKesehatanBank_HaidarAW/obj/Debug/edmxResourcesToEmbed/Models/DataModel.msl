@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppMonitoringKesehatanBankModelStoreContainer" CdmEntityContainer="AppMonitoringKesehatanBankEntities">
+    <EntitySetMapping Name="DataKesehatan">
+      <EntityTypeMapping TypeName="AppMonitoringKesehatanBankModel.DataKesehatan">
+        <MappingFragment StoreEntitySet="DataKesehatan">
+          <ScalarProperty Name="TotalRedColor" ColumnName="TotalRedColor" />
+          <ScalarProperty Name="SandiBank" ColumnName="SandiBank" />
+          <ScalarProperty Name="Periode" ColumnName="Periode" />
+          <ScalarProperty Name="KreditKol1" ColumnName="KreditKol1" />
+          <ScalarProperty Name="KreditKol2" ColumnName="KreditKol2" />
+          <ScalarProperty Name="KreditKol3" ColumnName="KreditKol3" />
+          <ScalarProperty Name="KreditKol4" ColumnName="KreditKol4" />
+          <ScalarProperty Name="KreditKol5" ColumnName="KreditKol5" />
+          <ScalarProperty Name="Laba" ColumnName="Laba" />
+          <ScalarProperty Name="Modal" ColumnName="Modal" />
+          <ScalarProperty Name="TotalAset" ColumnName="TotalAset" />
+          <ScalarProperty Name="ATMR" ColumnName="ATMR" />
+          <ScalarProperty Name="BebanOperasional" ColumnName="BebanOperasional" />
+          <ScalarProperty Name="PendapatanOperasional" ColumnName="PendapatanOperasional" />
+          <ScalarProperty Name="DanaPihakKe3" ColumnName="DanaPihakKe3" />
+          <ScalarProperty Name="NPL" ColumnName="NPL" />
+          <ScalarProperty Name="ROE" ColumnName="ROE" />
+          <ScalarProperty Name="ROA" ColumnName="ROA" />
+          <ScalarProperty Name="LDR" ColumnName="LDR" />
+          <ScalarProperty Name="BOPO" ColumnName="BOPO" />
+          <ScalarProperty Name="CAR" ColumnName="CAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

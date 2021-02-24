@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MonitoringKesehatanBank_HaidarAW.Models.DataKesehatan>
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<h4>Tambah Data Kesehatan Dengan Upload Excel</h4>
+<hr />
+@using (Html.BeginForm("UploadExcel", "UploadData", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "return myFunction()" }))
+{
+
+    <div class="form-horizontal">
+        <div class="form-group">            
+            <div class="control-label col-md-2">Download Template Excel:</div>
+            <div class="col-md-10">
+                <a href="/UploadData/DownloadExcel/"><img src="~/Img/Excel.ico" width="25" height="25" title="Download Excel format" alt="excel" /></a>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <div class="control-label col-md-2">Upload Excel:</div>
+            <div class="col-md-10">
+                <input type="file" id="FileUpload" name="FileUpload" class="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Upload" id="btnSubmit" class="btn btn-primary" />
+
+            </div>
+        </div>
+    </div>
+}
+

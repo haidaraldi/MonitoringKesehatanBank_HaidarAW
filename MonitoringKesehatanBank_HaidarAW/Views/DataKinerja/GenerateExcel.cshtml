@@ -1,0 +1,146 @@
+﻿@model IEnumerable<MonitoringKesehatanBank_HaidarAW.Models.DataKesehatan>
+
+@{
+    ViewBag.Title = "Lihat Kinerja";
+}
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<h2>Data Kinerja</h2>
+
+
+@using (Html.BeginForm("Index", "DataKinerja", FormMethod.Get))
+{
+    <table border="1" class="table">
+        <colgroup span="2"></colgroup>
+        <tr>
+            <th rowspan="2" scope="rowgroup" class="text-center">
+                @Html.ActionLink("Sandi Bank", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th colspan="1" scope="colgroup" class="text-center">Kredit</th>
+            <th colspan="2" scope="colgroup" class="text-center">Profitabilitas</th>
+            <th colspan="1" scope="colgroup" class="text-center">Likuiditas</th>
+            <th colspan="1" scope="colgroup" class="text-center">Efisiensi</th>
+            <th colspan="1" scope="colgroup" class="text-center">Resiliensi</th>
+            <th colspan="6" scope="colgroup" class="text-center">Rekap Komposit</th>
+        </tr>
+        <tr>
+            <th scope="col" class="text-center">NPL</th>
+            <th scope="col" class="text-center">ROE</th>
+            <th scope="col" class="text-center">ROA</th>
+            <th scope="col" class="text-center">LDR</th>
+            <th scope="col" class="text-center">BOPO</th>
+            <th scope="col" class="text-center">CAR</th>
+            <th scope="col" class="text-center">Kr</th>
+            <th scope="col" class="text-center">Pr</th>
+            <th scope="col" class="text-center">Lk</th>
+            <th scope="col" class="text-center">Ef</th>
+            <th scope="col" class="text-center">Re</th>
+            <th scope="col" class="text-center">Komposit</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SandiBank)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NPL)
+                    %
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ROE)
+                    %
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ROA)
+                    %
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LDR)
+                    %
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BOPO)
+                    %
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CAR)
+                    %
+                </td>
+                @if (item.NPL > 5)
+                {
+                    <td style="background-color:red">
+                    </td>
+
+                }
+                else if (item.NPL <= 5)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+
+                @if (item.ROE <= 5 || item.ROA < 1)
+                {
+                    <td style="background-color:red">
+                    </td>
+                }
+                else if (item.ROE > 5 || item.ROA > 1)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+
+                @if (item.LDR > 94 || item.LDR < 82)
+                {
+                    <td style="background-color:red">
+                    </td>
+                }
+                else if (item.LDR >= 82 && item.LDR <= 94)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+
+                @if (item.BOPO > 80)
+                {
+                    <td style="background-color:red">
+                    </td>
+                }
+                else if (item.BOPO < 80)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+
+                @if (item.CAR < 20)
+                {
+                    <td style="background-color:red">
+                    </td>
+                }
+                else if (item.CAR > 20)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+
+                @if (item.TotalRedColor > 2)
+                {
+                    <td style="background-color:red">
+                    </td>
+                }
+                else if (item.TotalRedColor == 2)
+                {
+                    <td style="background-color:yellow">
+                    </td>
+                }
+                else if (item.TotalRedColor <= 1)
+                {
+                    <td style="background-color:green">
+                    </td>
+                }
+            </tr>
+        }
+
+    </table>
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringKesehatanBank_HaidarAW", "MonitoringKesehatanBank_HaidarAW\MonitoringKesehatanBank_HaidarAW.csproj", "{FCD4F494-09AA-48B9-AB71-9A420CD7CA4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringKesehatanBank_HaidarAW.Tests", "MonitoringKesehatanBank_HaidarAW.Tests\MonitoringKesehatanBank_HaidarAW.Tests.csproj", "{A1B1F6D0-FFCE-4392-97C9-1C10F8C77785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCD4F494-09AA-48B9-AB71-9A420CD7CA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD4F494-09AA-48B9-AB71-9A420CD7CA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD4F494-09AA-48B9-AB71-9A420CD7CA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD4F494-09AA-48B9-AB71-9A420CD7CA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B1F6D0-FFCE-4392-97C9-1C10F8C77785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B1F6D0-FFCE-4392-97C9-1C10F8C77785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B1F6D0-FFCE-4392-97C9-1C10F8C77785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B1F6D0-FFCE-4392-97C9-1C10F8C77785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CA7451B-A60D-4816-ADB2-C3F3DAA3EE49}
+	EndGlobalSection
+EndGlobal

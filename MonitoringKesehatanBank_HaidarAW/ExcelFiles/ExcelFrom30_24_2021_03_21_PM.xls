@@ -1,0 +1,313 @@
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<h2>Data Kinerja</h2>
+
+
+<form action="/DataKinerja" method="get">    <table border="1" class="table">
+        <colgroup span="2"></colgroup>
+        <tr>
+            <th rowspan="2" scope="rowgroup" class="text-center">
+                <a href="/DataKinerja">Sandi Bank</a>
+            </th>
+            <th colspan="1" scope="colgroup" class="text-center">Kredit</th>
+            <th colspan="2" scope="colgroup" class="text-center">Profitabilitas</th>
+            <th colspan="1" scope="colgroup" class="text-center">Likuiditas</th>
+            <th colspan="1" scope="colgroup" class="text-center">Efisiensi</th>
+            <th colspan="1" scope="colgroup" class="text-center">Resiliensi</th>
+            <th colspan="6" scope="colgroup" class="text-center">Rekap Komposit</th>
+        </tr>
+        <tr>
+            <th scope="col" class="text-center">NPL</th>
+            <th scope="col" class="text-center">ROE</th>
+            <th scope="col" class="text-center">ROA</th>
+            <th scope="col" class="text-center">LDR</th>
+            <th scope="col" class="text-center">BOPO</th>
+            <th scope="col" class="text-center">CAR</th>
+            <th scope="col" class="text-center">Kr</th>
+            <th scope="col" class="text-center">Pr</th>
+            <th scope="col" class="text-center">Lk</th>
+            <th scope="col" class="text-center">Ef</th>
+            <th scope="col" class="text-center">Re</th>
+            <th scope="col" class="text-center">Komposit</th>
+        </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    89,29
+                    %
+                </td>
+                <td>
+                    6,00
+                    %
+                </td>
+                <td>
+                    3,00
+                    %
+                </td>
+                <td>
+                    35,00
+                    %
+                </td>
+                <td>
+                    66,67
+                    %
+                </td>
+                <td>
+                    200,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:yellow">
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    8,63
+                    %
+                </td>
+                <td>
+                    16,67
+                    %
+                </td>
+                <td>
+                    10,00
+                    %
+                </td>
+                <td>
+                    47,17
+                    %
+                </td>
+                <td>
+                    175,00
+                    %
+                </td>
+                <td>
+                    100,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    3
+                </td>
+                <td>
+                    86,21
+                    %
+                </td>
+                <td>
+                    12,00
+                    %
+                </td>
+                <td>
+                    6,00
+                    %
+                </td>
+                <td>
+                    32,22
+                    %
+                </td>
+                <td>
+                    75,00
+                    %
+                </td>
+                <td>
+                    50,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:yellow">
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    4
+                </td>
+                <td>
+                    32,51
+                    %
+                </td>
+                <td>
+                    25,00
+                    %
+                </td>
+                <td>
+                    16,67
+                    %
+                </td>
+                <td>
+                    18,14
+                    %
+                </td>
+                <td>
+                    83,33
+                    %
+                </td>
+                <td>
+                    80,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    5
+                </td>
+                <td>
+                    60,00
+                    %
+                </td>
+                <td>
+                    12,00
+                    %
+                </td>
+                <td>
+                    6,00
+                    %
+                </td>
+                <td>
+                    90,91
+                    %
+                </td>
+                <td>
+                    75,00
+                    %
+                </td>
+                <td>
+                    50,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    6
+                </td>
+                <td>
+                    60,00
+                    %
+                </td>
+                <td>
+                    25,00
+                    %
+                </td>
+                <td>
+                    16,67
+                    %
+                </td>
+                <td>
+                    62,50
+                    %
+                </td>
+                <td>
+                    83,33
+                    %
+                </td>
+                <td>
+                    80,00
+                    %
+                </td>
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+
+                    <td style="background-color:green">
+                    </td>
+
+                    <td style="background-color:red">
+                    </td>
+            </tr>
+
+    </table>
+</form>

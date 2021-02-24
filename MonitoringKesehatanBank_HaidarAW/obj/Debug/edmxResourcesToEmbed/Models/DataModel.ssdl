@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppMonitoringKesehatanBankModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DataKesehatan">
+    <Key>
+      <PropertyRef Name="SandiBank" />
+    </Key>
+    <Property Name="SandiBank" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Periode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="KreditKol1" Type="float" Nullable="false" />
+    <Property Name="KreditKol2" Type="float" Nullable="false" />
+    <Property Name="KreditKol3" Type="float" Nullable="false" />
+    <Property Name="KreditKol4" Type="float" Nullable="false" />
+    <Property Name="KreditKol5" Type="float" Nullable="false" />
+    <Property Name="Laba" Type="float" Nullable="false" />
+    <Property Name="Modal" Type="float" Nullable="false" />
+    <Property Name="TotalAset" Type="float" Nullable="false" />
+    <Property Name="ATMR" Type="float" Nullable="false" />
+    <Property Name="BebanOperasional" Type="float" Nullable="false" />
+    <Property Name="PendapatanOperasional" Type="float" Nullable="false" />
+    <Property Name="DanaPihakKe3" Type="float" Nullable="false" />
+    <Property Name="NPL" Type="float" />
+    <Property Name="ROE" Type="float" />
+    <Property Name="ROA" Type="float" />
+    <Property Name="LDR" Type="float" />
+    <Property Name="BOPO" Type="float" />
+    <Property Name="CAR" Type="float" />
+    <Property Name="TotalRedColor" Type="int" />
+  </EntityType>
+  <EntityContainer Name="AppMonitoringKesehatanBankModelStoreContainer">
+    <EntitySet Name="DataKesehatan" EntityType="Self.DataKesehatan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
